@@ -26,8 +26,8 @@ router.post("/message", (req, res) => {
   if (body.object === "page") {
 
     body.entry.forEach(function(entry) {
-      let webhook_event = entry.messaging[0];
-      console.log(webhook_event);
+      // let webhook_event = entry.messaging[0];
+      console.log(entry);
     });
 
     res.status(200).send("EVENT_RECEIVED");
