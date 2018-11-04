@@ -86,10 +86,7 @@ router.post("/message", (req, res) => {
   if (body.object === "page") {
 
     body.entry.forEach(function(entry) {
-      // let webhook_event = entry.messaging[0];
-
       reponse(entry.messaging[0].message.text, entry.messaging[0].sender);
-      
       console.log(util.inspect(entry, showHidden = false, depth = 5, colorize = true));
     });
 
